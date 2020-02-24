@@ -7,8 +7,8 @@ import (
 	"strconv"
 )
 
-func Write(csvData [][]string) {
-	recordFile, err := os.Create("./superhero.csv")
+func Write(csvData [][]string, filename string) {
+	recordFile, err := os.Create(filename)
 	if err != nil {
 		fmt.Println("Error creating file", err)
 		return
@@ -30,8 +30,8 @@ func Write(csvData [][]string) {
 	}
 }
 
-func WriteLine(csvData [][]string) {
-	recordFile, err := os.Create("./superheros2.csv")
+func WriteLine(csvData [][]string, filename string) {
+	recordFile, err := os.Create(filename)
 
 	if err != nil {
 		fmt.Println("Error Creating file", err)
